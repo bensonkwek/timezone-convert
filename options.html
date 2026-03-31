@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Timezone Hover Converter Settings</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 24px; background: #fff; color: #202124; }
+    h1 { margin-top: 0; font-size: 20px; }
+    fieldset { border: 1px solid #dadce0; border-radius: 8px; padding: 16px; margin: 0 0 18px; }
+    legend { font-weight: 700; margin-bottom: 12px; }
+    label { display: block; margin-bottom: 10px; font-weight: 600; cursor: pointer; }
+    .option-label { font-weight: 400; }
+    input[type="text"] { margin-left: 24px; display: block; margin-top: 8px; width: 120px; padding: 8px; font-size: 14px; border: 1px solid #dadce0; border-radius: 6px; }
+    button { margin-top: 8px; padding: 10px 16px; background: #1a73e8; border: none; color: white; border-radius: 6px; cursor: pointer; font-size: 14px; }
+    button:hover { background: #1669c1; }
+    .info { margin-top: 16px; color: #5f6368; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Timezone settings</h1>
+  <fieldset>
+    <legend>Select output timezone</legend>
+    <label><input type="radio" name="timezoneMode" value="UTC" /> <span class="option-label">UTC</span></label>
+    <label><input type="radio" name="timezoneMode" value="LOCAL" /> <span class="option-label">Local timezone (<span id="localTimezoneLabel"></span>)</span></label>
+    <label><input type="radio" name="timezoneMode" value="CUSTOM" /> <span class="option-label">Custom GMT offset</span></label>
+    <input type="text" id="offsetInput" placeholder="+08:00" />
+    <p class="info">Custom offset must be entered as +HH, +HHMM, +HH:MM, -HH or -HH:MM.</p>
+  </fieldset>
+  <button id="saveButton">Save timezone</button>
+  <p class="info">Your hovered datetimes will convert according to the selected mode.</p>
+  <script src="src/options.js"></script>
+</body>
+</html>

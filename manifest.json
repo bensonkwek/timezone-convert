@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Timezone Hover Converter",
+  "version": "1.0",
+  "description": "Hover over datetime text on a webpage and convert it to your preferred timezone.",
+  "permissions": ["storage"],
+  "options_page": "options.html",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Timezone Hover Converter"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/timezones.js", "src/utils.js", "src/content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

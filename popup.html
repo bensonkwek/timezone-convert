@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Timezone Hover Converter</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; min-width: 260px; padding: 16px; background: #f6f7fb; color: #202124; }
+    h1 { font-size: 16px; margin: 0 0 12px; }
+    p { margin: 8px 0; }
+    button { margin-top: 12px; padding: 10px 14px; border: none; border-radius: 6px; background: #1a73e8; color: white; cursor: pointer; font-size: 14px; }
+    button:hover { background: #1669c1; }
+    .small { color: #5f6368; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>Timezone Hover Converter</h1>
+  <p>Preferred timezone:</p>
+  <p id="timezoneLabel" class="small">Loading...</p>
+  <button id="openOptions">Change timezone</button>
+  <script src="src/popup.js"></script>
+</body>
+</html>

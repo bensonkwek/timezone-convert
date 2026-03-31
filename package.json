@@ -1,0 +1,8 @@
+{
+  "name": "timezone_covert",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node tests/utils.test.js"
+  }
+}
