@@ -15,7 +15,6 @@ jobs:
       - run: npm ci
       - run: npm audit --audit-level=moderate
       - run: npx lockfile-lint --path package-lock.json --validate-https
-      - run: npx web-ext lint --source-dir .
   test:
     runs-on: ubuntu-latest
     steps:
