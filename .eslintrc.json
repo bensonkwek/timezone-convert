@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2024": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "script"
+  },
+  "globals": {
+    "chrome": "readonly",
+    "cleanupText": "readonly",
+    "DATE_PATTERN": "readonly",
+    "parseDateTimeString": "readonly",
+    "formatForTimeZone": "readonly",
+    "TZ_OFFSET_MAP": "readonly"
+  },
+  "rules": {
+    "no-console": "off"
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "package-lock.json",
+    ".github/"
+  ]
+}
