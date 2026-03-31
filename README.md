@@ -13,6 +13,8 @@ A Chrome extension that detects datetime strings on a page and converts them to 
 - Open `Options` from the extension menu or popup.
 - Choose your preferred timezone.
 - Hover over datetime text such as `Mar 26 10:30AM EST` on any page.
+
+- Hover over datetime text such as `Mar 20 04:30AM EST` on any page.
 - A tooltip will show the converted datetime in your selected timezone.
 
 ![Example 1](images/example1.png)
