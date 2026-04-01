@@ -1,4 +1,4 @@
-const DATE_PATTERN = /\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\.??\s+\d{1,2}(?:,\s*\d{4})?\s*\d{1,2}(?::\d{2})?(?::\d{2})?\s*(?:AM|PM)?\s*(?:(?:GMT|UTC)[+-]?\d{1,2}(?::?\d{2})?|[A-Za-z]{2,4}|[+-]\d{2}:?\d{2})\b|\b\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}(?::\d{2})?\s*(?:[+-]\d{2}:?\d{2})\b/gi;
+const DATE_PATTERN = /\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\.??\s+\d{1,2}(?:,\s*\d{4})?\s*,?\s*\d{1,2}(?::\d{2})?(?::\d{2})?\s*(?:AM|PM)?\s*(?:(?:GMT|UTC)[+-]?\d{1,2}(?::?\d{2})?|[A-Za-z]{2,4}|[+-]\d{2}:?\d{2})\b|\b\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}(?::\d{2})?\s*(?:[+-]\d{2}:?\d{2})\b/gi;
 
 const MONTHS = {
   jan: 1,
@@ -45,7 +45,7 @@ function parseTimeZoneOffset(raw) {
 
 function parseDateTimeString(value) {
   const cleaned = cleanupText(value);
-  const monthMatch = cleaned.match(/^([A-Za-z]{3,9})\.?\s+(\d{1,2})(?:,\s*(\d{4}))?\s*(\d{1,2})(?::(\d{2}))?(?::(\d{2}))?\s*(AM|PM)?\s*((?:GMT|UTC)[+-]?\d{1,2}(?::?\d{2})?|[A-Za-z]{2,4}|[+-]\d{2}:?\d{2})?$/i);
+  const monthMatch = cleaned.match(/^([A-Za-z]{3,9})\.?\s+(\d{1,2})(?:,\s*(\d{4}))?\s*,?\s*(\d{1,2})(?::(\d{2}))?(?::(\d{2}))?\s*(AM|PM)?\s*((?:GMT|UTC)[+-]?\d{1,2}(?::?\d{2})?|[A-Za-z]{2,4}|[+-]\d{2}:?\d{2})?$/i);
 
   if (monthMatch) {
     const [, monthText, dayText, yearText, hourText, minuteText, secondText, meridiem, tzText] = monthMatch;
