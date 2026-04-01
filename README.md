@@ -20,5 +20,5 @@ A Chrome extension that detects datetime strings on a page and converts them to 
 - `Apr 01 04:30AM SGT`
 - `Dec 31 12:30PM GMT+8`
 
-![Example 1](images/example1.png)
+![Example](images/example.png)
 
