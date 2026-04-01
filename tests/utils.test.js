@@ -52,6 +52,13 @@ function run() {
   );
 
   assert.strictEqual(
+    findDateStringInText('Event: Mar 31, 2026, 5:34 PM SGT starts soon'),
+    'Mar 31, 2026, 5:34 PM SGT'
+  );
+
+  expectDate('Mar 31, 2026, 5:34 PM SGT', '2026-03-31T09:34:00.000Z');
+
+  assert.strictEqual(
     findDateStringInText('ISO time: 2026-03-31 10:34 -05:00'),
     '2026-03-31 10:34 -05:00'
   );
