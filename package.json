@@ -9,7 +9,7 @@
     "audit": "npm audit --audit-level=moderate"
   },
   "devDependencies": {
-    "eslint": "^8.57.1",
+    "eslint": "^10.2.1",
     "web-ext": "^10.1.0"
   }
 }
